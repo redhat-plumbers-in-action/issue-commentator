@@ -25,5 +25,3 @@ jobs:
         with:
           publish_latest_tag: false
           token: ${{ secrets.GITHUB_TOKEN }}
-
-...

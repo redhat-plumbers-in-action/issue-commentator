@@ -1,17 +1,23 @@
 ---
 
-name: Your name here
-description: Provide a description here
+name: Issue Commentator
+description: GitHub Action that creates and updates status comments on issues and pull requests
 
 branding:
   color: blue
-  icon: activity
+  icon: message-square
 
 inputs:
-  milliseconds:
+  issue:
     required: true
-    description: input description here
-    default: default value if applicable
+    description: Number of issue where to comment
+  message:
+    required: true
+    description: Content of the comment
+
+  token:
+    required: true
+    description: GitHub TOKEN or PAT
 
 runs:
   using: node20

@@ -33,5 +33,3 @@ jobs:
         with:
           issue-form: ${{ steps.issue-parser.outputs.jsonString }}
           token: ${{ secrets.GITHUB_TOKEN }}
-
-...
