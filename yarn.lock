@@ -869,15 +869,15 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@octokit/webhooks@npm:^9.8.4":
-  version: 9.26.0
-  resolution: "@octokit/webhooks@npm:9.26.0"
+"@octokit/webhooks@npm:^9.26.3":
+  version: 9.26.3
+  resolution: "@octokit/webhooks@npm:9.26.3"
   dependencies:
     "@octokit/request-error": ^2.0.2
     "@octokit/webhooks-methods": ^2.0.0
     "@octokit/webhooks-types": 5.8.0
     aggregate-error: ^3.1.0
-  checksum: 97da13d2464095d68068ff2fd7d2aa42d1c88e6271eb929ae50890396d16862debfa2078e650823bacf42c4a1c606137d3715a5f970bfcbc2bbdf66bca38760e
+  checksum: f12611db4327e0056af146d32ae6fc3030ed2410cc7aee44aeeb7b3e6cb8abc714a0fd0a98307d902938dbf76768314143be1425c904a2441e8fef4ea4c729b6
   languageName: node
   linkType: hard
 
@@ -4663,8 +4663,8 @@ __metadata:
   linkType: hard
 
 "probot@npm:^12.2.1":
-  version: 12.3.1
-  resolution: "probot@npm:12.3.1"
+  version: 12.3.3
+  resolution: "probot@npm:12.3.3"
   dependencies:
     "@octokit/core": ^3.2.4
     "@octokit/plugin-enterprise-compatibility": ^1.2.8
@@ -4673,7 +4673,7 @@ __metadata:
     "@octokit/plugin-retry": ^3.0.6
     "@octokit/plugin-throttling": ^3.3.4
     "@octokit/types": ^8.0.0
-    "@octokit/webhooks": ^9.8.4
+    "@octokit/webhooks": ^9.26.3
     "@probot/get-private-key": ^1.1.0
     "@probot/octokit-plugin-config": ^1.0.0
     "@probot/pino": ^2.2.0
@@ -4701,7 +4701,7 @@ __metadata:
     uuid: ^8.3.2
   bin:
     probot: bin/probot.js
-  checksum: 4fccd3f327b64f11c04330dd1600a100277a4dbc0b6dfef03ad04c280cd5825fb14df2140cb2b6cb96e1577a248b2457a224f6129351204269e2fe683e62a497
+  checksum: 1e63f9b4bbb8e2e7531431d32da96e2643779219c5c0bee9103668b2274a9fc27604d250b1e7f1fd4bf8dcab801a9dbd6138edd384ce77bf0dec224ad21bb795
   languageName: node
   linkType: hard
 
