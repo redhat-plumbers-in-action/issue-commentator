@@ -1,12 +1,12 @@
 import { getInput } from '@actions/core';
-import { Octokit } from '@octokit/core';
 
 import { Issue } from './issue';
+import { CustomOctokit } from './octokit';
 import { composeComment } from './utils';
 
 import { issueSchema, messageSchema } from './schema/inputs';
 
-async function action(octokit: Octokit) {
+async function action(octokit: CustomOctokit) {
   const issueInputParsed = issueSchema.safeParse(
     getInput('issue', { required: true })
   );

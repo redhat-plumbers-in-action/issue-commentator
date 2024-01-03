@@ -1,12 +1,12 @@
 import { warning } from '@actions/core';
 import { context } from '@actions/github';
-import { Octokit } from '@octokit/core';
 
 import { Metadata } from './metadata';
+import { CustomOctokit } from './octokit';
 
 export class Issue {
   private constructor(
-    readonly octokit: Octokit,
+    readonly octokit: CustomOctokit,
     readonly number: number,
     readonly title: string,
     public message: string,
@@ -79,7 +79,10 @@ export class Issue {
     );
   }
 
-  static async getIssue(octokit: Octokit, issueNumber: number): Promise<Issue> {
+  static async getIssue(
+    octokit: CustomOctokit,
+    issueNumber: number
+  ): Promise<Issue> {
     const { data } = await octokit.request(
       'GET /repos/{owner}/{repo}/issues/{issue_number}',
       {

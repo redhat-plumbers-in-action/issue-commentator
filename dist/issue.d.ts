@@ -1,7 +1,7 @@
-import { Octokit } from '@octokit/core';
 import { Metadata } from './metadata';
+import { CustomOctokit } from './octokit';
 export declare class Issue {
-    readonly octokit: Octokit;
+    readonly octokit: CustomOctokit;
     readonly number: number;
     readonly title: string;
     message: string;
@@ -11,5 +11,5 @@ export declare class Issue {
     getComment(): Promise<string>;
     createComment(body: string): Promise<string | undefined>;
     updateComment(body: string): Promise<void>;
-    static getIssue(octokit: Octokit, issueNumber: number): Promise<Issue>;
+    static getIssue(octokit: CustomOctokit, issueNumber: number): Promise<Issue>;
 }
