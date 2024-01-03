@@ -1,7 +1,7 @@
 {
-  "name": "typescript-action",
+  "name": "issue-commentator",
   "version": "1.0.0",
-  "description": "TypeScript template action",
+  "description": "GitHub Action that creates and updates status comments on issues and pull requests",
   "main": "src/main.ts",
   "scripts": {
     "build": "tsc",
@@ -15,12 +15,12 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/redhat-plumbers-in-action/typescript-action.git"
+    "url": "git+https://github.com/redhat-plumbers-in-action/issue-commentator.git"
   },
   "keywords": [
     "actions",
-    "node",
-    "setup"
+    "comments",
+    "github"
   ],
   "author": "jamacku@redhat.com",
   "license": "MIT",
