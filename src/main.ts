@@ -1,14 +1,12 @@
 import { getInput, setFailed } from '@actions/core';
-import { Octokit } from '@octokit/core';
 
 import '@total-typescript/ts-reset';
 
 import action from './action';
+import { getOctokit } from './octokit';
 
 try {
-  const octokit = new Octokit({
-    auth: getInput('token', { required: true }),
-  });
+  const octokit = getOctokit(getInput('token', { required: true }));
 
   await action(octokit);
 } catch (error) {

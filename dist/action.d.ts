@@ -1,3 +1,3 @@
-import { Octokit } from '@octokit/core';
-declare function action(octokit: Octokit): Promise<void>;
+import { CustomOctokit } from './octokit';
+declare function action(octokit: CustomOctokit): Promise<void>;
 export default action;
