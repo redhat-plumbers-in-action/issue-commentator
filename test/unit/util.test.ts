@@ -31,8 +31,8 @@ describe('Unit tests of general utilities', () => {
       expect(
         composeComment(
           `${JSON.stringify('Hello, world!')}\n${JSON.stringify(
-            'Hello, universe!'
-          )}`
+            ''
+          )}\n${JSON.stringify('Hello, universe!')}`
         )
       ).toMatchInlineSnapshot(`
         "Hello, world!
