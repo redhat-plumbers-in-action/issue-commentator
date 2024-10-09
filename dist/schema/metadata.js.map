@@ -1,0 +1,1 @@
+{"version":3,"file":"metadata.js","sourceRoot":"","sources":["../../src/schema/metadata.ts"],"names":[],"mappings":"AAAA,OAAO,EAAE,CAAC,EAAE,MAAM,KAAK,CAAC;AAExB,MAAM,CAAC,MAAM,YAAY,GAAG,YAAY,CAAC;AAEzC,MAAM,CAAC,MAAM,yBAAyB,GAAG,CAAC,CAAC,MAAM,CAAC;IAChD,CAAC,YAAY,CAAC,EAAE,CAAC,CAAC,MAAM,EAAE,CAAC,QAAQ,EAAE;CACtC,CAAC,CAAC"}
