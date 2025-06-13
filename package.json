@@ -29,8 +29,8 @@
     "@actions/core": "1.11.1",
     "@actions/github": "6.0.1",
     "@octokit/core": "7.0.2",
-    "@octokit/plugin-throttling": "9.6.1",
-    "@octokit/rest": "21.1.1",
+    "@octokit/plugin-throttling": "11.0.1",
+    "@octokit/rest": "22.0.0",
     "@total-typescript/ts-reset": "0.6.1",
     "issue-metadata": "0.2.4",
     "zod": "3.25.64"
