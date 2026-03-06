@@ -14,17 +14,19 @@ const mocks = vi.hoisted(() => {
 });
 
 vi.mock('@octokit/core', () => {
-  const Octokit = vi.fn(() => ({
-    request: mocks.request,
-  }));
+  const Octokit = vi.fn(function () {
+    return { request: mocks.request };
+  });
   return { Octokit };
 });
 
 vi.mock('issue-metadata', async () => {
-  const MetadataController = vi.fn(() => ({
-    getMetadata: mocks.getMetadata,
-    setMetadata: mocks.setMetadata,
-  }));
+  const MetadataController = vi.fn(function () {
+    return {
+      getMetadata: mocks.getMetadata,
+      setMetadata: mocks.setMetadata,
+    };
+  });
   return { default: MetadataController };
 });
 
@@ -41,6 +43,7 @@ describe('Integration tests', () => {
   });
 
   afterEach(async () => {
+    vi.clearAllMocks();
     vi.restoreAllMocks();
     vi.unstubAllEnvs();
   });
