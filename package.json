@@ -26,8 +26,8 @@
   "type": "module",
   "packageManager": "yarn@4.14.1",
   "dependencies": {
-    "@actions/core": "3.0.0",
-    "@actions/github": "9.0.0",
+    "@actions/core": "3.0.1",
+    "@actions/github": "9.1.1",
     "@octokit/core": "7.0.6",
     "@octokit/plugin-throttling": "11.0.3",
     "@octokit/rest": "22.0.1",
@@ -36,12 +36,12 @@
     "zod": "4.3.6"
   },
   "devDependencies": {
-    "@types/node": "25.3.5",
+    "@types/node": "25.6.0",
     "@vercel/ncc": "0.38.4",
-    "@vitest/coverage-v8": "4.0.18",
-    "prettier": "3.8.1",
+    "@vitest/coverage-v8": "4.1.5",
+    "prettier": "3.8.3",
     "ts-node": "10.9.2",
-    "typescript": "5.9.3",
-    "vitest": "4.0.18"
+    "typescript": "6.0.3",
+    "vitest": "4.1.5"
   }
 }
