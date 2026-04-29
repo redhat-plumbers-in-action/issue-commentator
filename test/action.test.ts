@@ -1,4 +1,5 @@
 import { Octokit } from '@octokit/core';
+import { context } from '@actions/github';
 import { afterEach, beforeEach, describe, expect, test, vi } from 'vitest';
 
 import action from '../src/action';
@@ -40,6 +41,9 @@ describe('Integration tests', () => {
 
     vi.stubEnv('INPUT_ISSUE', '1');
     vi.stubEnv('INPUT_TOKEN', 'mock-token');
+    // Run ID cannot be stubbed with vi.stubEnv because it is initialized only at the load time of the action
+    // 'GITHUB_RUN_ID', '987654321'
+    context.runId = 987654321;
   });
 
   afterEach(async () => {
@@ -110,7 +114,11 @@ This is not a test
 
 ---
 
-### Hello, multiverse!`;
+### Hello, multiverse!
+
+---
+
+_Triggered by [Workflow Run](https://github.com/redhat-plumbers-in-action/issue-commentator/actions/runs/987654321)_`;
 
     expect(mocks.request).toHaveBeenCalledWith(
       'POST /repos/{owner}/{repo}/issues/{issue_number}/comments',
@@ -201,7 +209,11 @@ This is not a test
 
 ---
 
-### Hello, multiverse!`;
+### Hello, multiverse!
+
+---
+
+_Triggered by [Workflow Run](https://github.com/redhat-plumbers-in-action/issue-commentator/actions/runs/987654321)_`;
 
     expect(mocks.request).toHaveBeenCalledWith(
       'PATCH /repos/{owner}/{repo}/issues/comments/{comment_id}',

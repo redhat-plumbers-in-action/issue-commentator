@@ -1,4 +1,5 @@
 import { getInput } from '@actions/core';
+import { context } from '@actions/github';
 
 import { Issue } from './issue';
 import { CustomOctokit } from './octokit';
@@ -19,7 +20,12 @@ async function action(octokit: CustomOctokit) {
   );
   if (!messageInputParsed.success)
     throw new Error(`Input 'message' doesn't provide required value.`);
-  const message = composeComment(messageInputParsed.data);
+
+  const workflowRunUrl = `https://github.com/${context.repo.owner}/${context.repo.repo}/actions/runs/${context.runId}`;
+
+  const message = composeComment(
+    `${messageInputParsed.data}\n_Triggered by [Workflow Run](${workflowRunUrl})_`
+  );
 
   const issue = await Issue.getIssue(octokit, issueNumber);
   await issue.publishComment(message);

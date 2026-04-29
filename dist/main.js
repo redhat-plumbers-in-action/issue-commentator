@@ -43594,7 +43594,11 @@ async function action(octokit) {
   );
   if (!messageInputParsed.success)
     throw new Error(`Input 'message' doesn't provide required value.`);
-  const message = composeComment(messageInputParsed.data);
+  const workflowRunUrl = `https://github.com/${context2.repo.owner}/${context2.repo.repo}/actions/runs/${context2.runId}`;
+  const message = composeComment(
+    `${messageInputParsed.data}
+_Triggered by [Workflow Run](${workflowRunUrl})_`
+  );
   const issue3 = await Issue.getIssue(octokit, issueNumber);
   await issue3.publishComment(message);
 }
